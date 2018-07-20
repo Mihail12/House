@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Houses</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap-grid.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap-reboot.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/custom.css' %}" />
+</head>
+<body class="body" style="background-color:#f6f6f6">
+	<div class="container-fluid" style="min-height:95%; ">
+		<div class="row">
+			  <div class="col-sm-12">
+				  <br>
+				  <center>
+				  <h3>Welcome to House project</h3>
+				  </center>
+			  </div>
+		</div><hr>
+
+		<div class="row">
+		  <div class="col-sm-2">
+		  <br>
+		  <br>
+		 	<div class="well bs-sidebar" id="sidebar" style="background-color:#fff">
+			  {% block sidebar %}
+			  <ul class="">
+				  <li><a href="{% url "admin:app_housemates_changelist" %}">Admin</a></li>
+				  <li><a href="{% url "house" %}">All Houses</a></li>
+				  <li><a href="{% url "housemates" %}">All Housemates</a></li>
+			  </ul>
+			  {% endblock %}
+			</div>
+		  </div> <!--col-sm-2-->
+		  <div class="col-sm-10">
+			<div class='container-fluid'>
+			<br><br>
+			   {% block content %}
+			   {% endblock %}
+			</div>
+		  </div>
+		</div>
+	</div>
+	<footer>
+		<div class="container-fluid" style='margin-left:15px'>
+			<p><a href="https://www.linkedin.com/in/michael-spasenko-0921a8119/" target="blank">LinkedIn</a></p>
+		</div>
+	</footer>
+
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+{% extends "app/base.html" %}
+
+{% block content %}
+    <h1>Housemates List</h1>
+
+    {% if object_list %}
+        <div class="ibox-content">
+            {% if is_paginated %}
+                <div class="pagination">
+                    <span class="page-links">
+                    {% if page_obj.has_previous %}
+                        <a href="?page={{ page_obj.previous_page_number }}&{{ get_params.urlencode }}">previous</a>
+                    {% endif %}
+                        <span class="page-current">
+                        Page {{ page_obj.number }} from {{ page_obj.paginator.num_pages }}
+                    </span>
+                        {% if page_obj.has_next %}
+                            <a href="?page={{ page_obj.next_page_number }}&{{ get_params.urlencode }}">next</a>
+                        {% endif %}
+                    </span>
+                </div>
+            {% endif %}
+            <table class="table table-hover">
+                <thead style="color: #0e90d2">
+                <tr class="table-">
+                    <th>Name</th>
+                    <th>Birthday</th>
+                    <th>apartment</th>
+                    <th>house</th>
+                </tr>
+                </thead>
+                {% for person in object_list %}
+                    <tr>
+                        <th>{{ person.last_name }} {{ person.middle_name }} {{ person.first_name }}</th>
+                        <th>{{ person.birth_date }}</th>
+                        <th>{{ person.apartment }}</th>
+                        <th>{{ person.house }}</th>
+                    </tr>
+                {% endfor %}
+
+            </table>
+        </div>
+    {% else %}
+      <p>There are no houses in database</p>
+    {% endif %}       
+{% endblock %}

@@ -1,0 +1,68 @@
+{% extends "app/base.html" %}
+
+{% block content %}
+    <h1>House List</h1>
+
+    {% if object_list %}
+        <div class="ibox-content">
+            {% if is_paginated %}
+                <div class="pagination">
+                    <span class="page-links">
+                    {% if page_obj.has_previous %}
+                        <a href="?page={{ page_obj.previous_page_number }}&{{ get_params.urlencode }}">previous</a>
+                    {% endif %}
+                        <span class="page-current">
+                        Page {{ page_obj.number }} from {{ page_obj.paginator.num_pages }}
+                    </span>
+                        {% if page_obj.has_next %}
+                            <a href="?page={{ page_obj.next_page_number }}&{{ get_params.urlencode }}">next</a>
+                        {% endif %}
+                    </span>
+                </div>
+            {% endif %}
+
+
+            <form method="get" action="{% url "house" %}" >
+
+                    <select class="form-control col-lg-4" name="sort">
+                        <option value='street'>alphabetize street up</option>
+                        <option value='-street'>alphabetize descending down</option>
+                        <option value='st_number'>street number in ascending order</option>
+                        <option value='-st_number'>street number in descending order</option>
+                        <option value='build_date'>by built date in ascending order</option>
+                        <option value='-build_date'>by built date in descending order</option>
+                    </select>
+
+                <div>
+                    <button class="btn btn-primary btn-rounded btn-block col-lg-4" type="submit">
+                        <i class="fa fa-search">Submit</i>
+                    </button>
+                </div>
+            </form>
+
+        <table class="table table-hover">
+            <thead style="color: #0e90d2">
+            <tr class="table-">
+                <th>Street</th>
+                <th>Number</th>
+                <th>Apartment amount</th>
+                <th>date built</th>
+                <th>Its housemates</th>
+            </tr>
+            </thead>
+            {% for house in object_list %}
+                <tr>
+                    <th>{{ house.street }}</th>
+                    <th>{{ house.st_number }}</th>
+                    <th>{{ house.apartment_amount }}</th>
+                    <th>{{ house.build_date }}</th>
+                    <th><a href="{% url "house_housemates" house.id %}">Link</a></th>
+                </tr>
+            {% endfor %}
+
+        </table>
+        </div>
+    {% else %}
+        <p>There are no houses in database</p>
+    {% endif %}
+{% endblock %}

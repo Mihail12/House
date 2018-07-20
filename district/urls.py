@@ -15,7 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.views.generic import TemplateView
+
+from app.views import HouseListView, HousematesListView, HouseHousematesListView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', TemplateView.as_view(template_name='app/base.html')),
+    path('house_list', HouseListView.as_view(), name='house'),
+    path('housemates_list', HousematesListView.as_view(), name='housemates'),
+    path('house_housemates_list/<int:pk>/', HouseHousematesListView.as_view(), name='house_housemates'),
 ]
