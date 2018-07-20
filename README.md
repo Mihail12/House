@@ -2,13 +2,13 @@
 
 
 project starts with command:
-```docker-compose up```
+```docker-compose up``` <br />
 then visit: http://localhost:8000/
 
 ---
 
 Access to admin:
 
-enter:
+enter: <br />
 login: ```admin```
-password: ```district```
+password: ```district``` <br />
