@@ -1,0 +1,286 @@
+[
+{
+  "model": "app.appuser",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$100000$N1M7qyhwusfJ$D9A2T0ddAiZyGT+2QjvdL5/4/zB+zEwCBRuyNNVu0hk=",
+    "last_login": "2018-07-19T21:08:43.162Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2018-07-19T21:02:19.586Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "app.house",
+  "pk": 1,
+  "fields": {
+    "street": "Cannon",
+    "st_number": "2",
+    "apartment_amount": "30",
+    "build_date": "2000-01-16"
+  }
+},
+{
+  "model": "app.house",
+  "pk": 2,
+  "fields": {
+    "street": "Fann",
+    "st_number": "7",
+    "apartment_amount": "10",
+    "build_date": "1918-04-19"
+  }
+},
+{
+  "model": "app.house",
+  "pk": 3,
+  "fields": {
+    "street": "Angel",
+    "st_number": "1",
+    "apartment_amount": "50",
+    "build_date": "2002-09-29"
+  }
+},
+{
+  "model": "app.house",
+  "pk": 4,
+  "fields": {
+    "street": "Foster",
+    "st_number": "56",
+    "apartment_amount": "23",
+    "build_date": "2012-07-11"
+  }
+},
+{
+  "model": "app.house",
+  "pk": 5,
+  "fields": {
+    "street": "Ramon",
+    "st_number": "34",
+    "apartment_amount": "34",
+    "build_date": "2011-07-09"
+  }
+},
+{
+  "model": "app.housemates",
+  "pk": 1,
+  "fields": {
+    "last_name": "Marine",
+    "middle_name": "Sido",
+    "first_name": "Bawell",
+    "birth_date": "1956-07-02",
+    "apartment": "2",
+    "house": 1
+  }
+},
+{
+  "model": "app.housemates",
+  "pk": 2,
+  "fields": {
+    "last_name": "Dunno",
+    "middle_name": null,
+    "first_name": "Lamel",
+    "birth_date": "1918-11-23",
+    "apartment": "1",
+    "house": 1
+  }
+},
+{
+  "model": "app.housemates",
+  "pk": 3,
+  "fields": {
+    "last_name": "Dimon",
+    "middle_name": "Sed",
+    "first_name": "Piccar",
+    "birth_date": "1967-07-19",
+    "apartment": "5",
+    "house": 1
+  }
+},
+{
+  "model": "app.housemates",
+  "pk": 4,
+  "fields": {
+    "last_name": "Damor",
+    "middle_name": null,
+    "first_name": "Ricare",
+    "birth_date": "1948-03-19",
+    "apartment": "12",
+    "house": 1
+  }
+},
+{
+  "model": "app.housemates",
+  "pk": 5,
+  "fields": {
+    "last_name": "Ricardo",
+    "middle_name": null,
+    "first_name": "Soviron",
+    "birth_date": "2000-01-12",
+    "apartment": "23",
+    "house": 2
+  }
+},
+{
+  "model": "app.housemates",
+  "pk": 6,
+  "fields": {
+    "last_name": "Vernon",
+    "middle_name": null,
+    "first_name": "Dursley",
+    "birth_date": "1989-03-12",
+    "apartment": "5",
+    "house": 2
+  }
+},
+{
+  "model": "app.housemates",
+  "pk": 7,
+  "fields": {
+    "last_name": "Savilla",
+    "middle_name": "Fan",
+    "first_name": "Royal",
+    "birth_date": "1984-11-09",
+    "apartment": "10",
+    "house": 2
+  }
+},
+{
+  "model": "app.housemates",
+  "pk": 8,
+  "fields": {
+    "last_name": "Angelina",
+    "middle_name": null,
+    "first_name": "Yarnova",
+    "birth_date": "2001-09-23",
+    "apartment": "9",
+    "house": 2
+  }
+},
+{
+  "model": "app.housemates",
+  "pk": 9,
+  "fields": {
+    "last_name": "Summon",
+    "middle_name": null,
+    "first_name": "Ronieno",
+    "birth_date": "1947-01-19",
+    "apartment": "12",
+    "house": 3
+  }
+},
+{
+  "model": "app.housemates",
+  "pk": 10,
+  "fields": {
+    "last_name": "Abigel",
+    "middle_name": "Darno",
+    "first_name": "Faldo",
+    "birth_date": "1998-05-22",
+    "apartment": "2",
+    "house": 3
+  }
+},
+{
+  "model": "app.housemates",
+  "pk": 11,
+  "fields": {
+    "last_name": "Tito",
+    "middle_name": null,
+    "first_name": "Tarnoga",
+    "birth_date": "1997-07-20",
+    "apartment": "3",
+    "house": 3
+  }
+},
+{
+  "model": "app.housemates",
+  "pk": 12,
+  "fields": {
+    "last_name": "Ascold",
+    "middle_name": "Nova",
+    "first_name": "Dumion",
+    "birth_date": "1967-07-14",
+    "apartment": "6",
+    "house": 4
+  }
+},
+{
+  "model": "app.housemates",
+  "pk": 13,
+  "fields": {
+    "last_name": "Anton",
+    "middle_name": "Victorovich",
+    "first_name": "Slovetsky",
+    "birth_date": "1987-10-19",
+    "apartment": "20",
+    "house": 4
+  }
+},
+{
+  "model": "app.housemates",
+  "pk": 14,
+  "fields": {
+    "last_name": "Ameli",
+    "middle_name": null,
+    "first_name": "Norango",
+    "birth_date": "1922-06-19",
+    "apartment": "9",
+    "house": 4
+  }
+},
+{
+  "model": "app.housemates",
+  "pk": 15,
+  "fields": {
+    "last_name": "Dumass",
+    "middle_name": null,
+    "first_name": "Lagovern",
+    "birth_date": "2004-03-21",
+    "apartment": "3",
+    "house": 4
+  }
+},
+{
+  "model": "app.housemates",
+  "pk": 16,
+  "fields": {
+    "last_name": "Saimon",
+    "middle_name": null,
+    "first_name": "Dios",
+    "birth_date": "1945-07-19",
+    "apartment": "7",
+    "house": 5
+  }
+},
+{
+  "model": "app.housemates",
+  "pk": 17,
+  "fields": {
+    "last_name": "Adele",
+    "middle_name": "Kior",
+    "first_name": "Nopse",
+    "birth_date": "2000-04-22",
+    "apartment": "2",
+    "house": 5
+  }
+},
+{
+  "model": "app.housemates",
+  "pk": 18,
+  "fields": {
+    "last_name": "Dascur",
+    "middle_name": null,
+    "first_name": "Fariton",
+    "birth_date": "1979-03-12",
+    "apartment": "7",
+    "house": 5
+  }
+}
+]
