@@ -10,5 +10,5 @@ then visit: http://localhost:8000/
 Access to admin:
 
 enter: <br />
-login: ```admin```
-password: ```district``` <br />
+login: ```admin``` <br />
+password: ```district```
