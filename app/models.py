@@ -5,12 +5,23 @@ from django.contrib.auth.models import AbstractUser
 class AppUser(AbstractUser):
     pass
 
+    class Meta:
+        app_label = 'app'
+        db_table = 'user'
+
 
 class House(models.Model):
     street = models.CharField(max_length=255)
     st_number = models.CharField(max_length=255)
     apartment_amount = models.CharField(max_length=255)
     build_date = models.DateField()
+
+    class Meta:
+        app_label = 'app'
+        db_table = 'house'
+
+    def __str__(self):
+        return 'Based on {}, {} St. / was built in {}'.format(self.st_number, self.street, self.build_date.strftime("%Y"))
 
 
 class Housemates(models.Model):
@@ -20,3 +31,11 @@ class Housemates(models.Model):
     birth_date = models.DateField()
     apartment = models.CharField(max_length=255)
     house = models.ForeignKey('House', on_delete=models.PROTECT)
+
+    class Meta:
+        app_label = 'app'
+        db_table = 'housemates'
+
+    def __str__(self):
+        return '{} {} {} / {}, {} St. {} Apt.'.format(self.first_name, self.middle_name, self.last_name,
+                                                     self.house.st_number, self.house.street, self.apartment)
