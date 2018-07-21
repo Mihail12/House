@@ -68,7 +68,7 @@
   }
 },
 {
-  "model": "app.housemates",
+  "model": "app.housemate",
   "pk": 1,
   "fields": {
     "last_name": "Marine",
@@ -80,7 +80,7 @@
   }
 },
 {
-  "model": "app.housemates",
+  "model": "app.housemate",
   "pk": 2,
   "fields": {
     "last_name": "Dunno",
@@ -92,7 +92,7 @@
   }
 },
 {
-  "model": "app.housemates",
+  "model": "app.housemate",
   "pk": 3,
   "fields": {
     "last_name": "Dimon",
@@ -104,7 +104,7 @@
   }
 },
 {
-  "model": "app.housemates",
+  "model": "app.housemate",
   "pk": 4,
   "fields": {
     "last_name": "Damor",
@@ -116,7 +116,7 @@
   }
 },
 {
-  "model": "app.housemates",
+  "model": "app.housemate",
   "pk": 5,
   "fields": {
     "last_name": "Ricardo",
@@ -128,7 +128,7 @@
   }
 },
 {
-  "model": "app.housemates",
+  "model": "app.housemate",
   "pk": 6,
   "fields": {
     "last_name": "Vernon",
@@ -140,7 +140,7 @@
   }
 },
 {
-  "model": "app.housemates",
+  "model": "app.housemate",
   "pk": 7,
   "fields": {
     "last_name": "Savilla",
@@ -152,7 +152,7 @@
   }
 },
 {
-  "model": "app.housemates",
+  "model": "app.housemate",
   "pk": 8,
   "fields": {
     "last_name": "Angelina",
@@ -164,7 +164,7 @@
   }
 },
 {
-  "model": "app.housemates",
+  "model": "app.housemate",
   "pk": 9,
   "fields": {
     "last_name": "Summon",
@@ -176,7 +176,7 @@
   }
 },
 {
-  "model": "app.housemates",
+  "model": "app.housemate",
   "pk": 10,
   "fields": {
     "last_name": "Abigel",
@@ -188,7 +188,7 @@
   }
 },
 {
-  "model": "app.housemates",
+  "model": "app.housemate",
   "pk": 11,
   "fields": {
     "last_name": "Tito",
@@ -200,7 +200,7 @@
   }
 },
 {
-  "model": "app.housemates",
+  "model": "app.housemate",
   "pk": 12,
   "fields": {
     "last_name": "Ascold",
@@ -212,7 +212,7 @@
   }
 },
 {
-  "model": "app.housemates",
+  "model": "app.housemate",
   "pk": 13,
   "fields": {
     "last_name": "Anton",
@@ -224,7 +224,7 @@
   }
 },
 {
-  "model": "app.housemates",
+  "model": "app.housemate",
   "pk": 14,
   "fields": {
     "last_name": "Ameli",
@@ -236,7 +236,7 @@
   }
 },
 {
-  "model": "app.housemates",
+  "model": "app.housemate",
   "pk": 15,
   "fields": {
     "last_name": "Dumass",
@@ -248,7 +248,7 @@
   }
 },
 {
-  "model": "app.housemates",
+  "model": "app.housemate",
   "pk": 16,
   "fields": {
     "last_name": "Saimon",
@@ -260,7 +260,7 @@
   }
 },
 {
-  "model": "app.housemates",
+  "model": "app.housemate",
   "pk": 17,
   "fields": {
     "last_name": "Adele",
@@ -272,7 +272,7 @@
   }
 },
 {
-  "model": "app.housemates",
+  "model": "app.housemate",
   "pk": 18,
   "fields": {
     "last_name": "Dascur",

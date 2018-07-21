@@ -20,47 +20,45 @@
                     </span>
                 </div>
             {% endif %}
-
-
-            <form method="get" action="{% url "house" %}" >
-
-                    <select class="form-control col-lg-4" name="sort">
-                        <option value='street'>alphabetize street up</option>
-                        <option value='-street'>alphabetize descending down</option>
-                        <option value='st_number'>street number in ascending order</option>
-                        <option value='-st_number'>street number in descending order</option>
-                        <option value='build_date'>by built date in ascending order</option>
-                        <option value='-build_date'>by built date in descending order</option>
-                    </select>
-
-                <div>
-                    <button class="btn btn-primary btn-rounded btn-block col-lg-4" type="submit">
-                        <i class="fa fa-search">Submit</i>
-                    </button>
-                </div>
-            </form>
-
-        <table class="table table-hover">
-            <thead style="color: #0e90d2">
-            <tr class="table-">
-                <th>Street</th>
-                <th>Number</th>
-                <th>Apartment amount</th>
-                <th>date built</th>
-                <th>Its housemates</th>
-            </tr>
-            </thead>
-            {% for house in object_list %}
+            <table class="table table-hover">
+                <thead class="green">
                 <tr>
-                    <th>{{ house.street }}</th>
-                    <th>{{ house.st_number }}</th>
-                    <th>{{ house.apartment_amount }}</th>
-                    <th>{{ house.build_date }}</th>
-                    <th><a href="{% url "house_housemates" house.id %}">Link</a></th>
+                    <th>
+                        {% if view.kwargs.sort == '-street' %}
+                            <a href="{% url "house_sort" 'street' %}" class="green">Street <i class="fa fa-caret-up"></i></a>
+                        {% else %}
+                            <a href="{% url "house_sort" '-street' %}" class="green">Street <i class="fa fa-caret-down"></i></a>
+                        {% endif %}
+                    </th>
+                    <th>
+                        {% if view.kwargs.sort == '-st_number' %}
+                            <a href="{% url "house_sort" 'st_number' %}" class="green">Number <i class="fa fa-caret-up"></i></a>
+                        {% else %}
+                            <a href="{% url "house_sort" '-st_number' %}" class="green">Number <i class="fa fa-caret-down"></i></a>
+                        {% endif %}
+                    </th>
+                    <th>Apartment amount</th>
+                    <th>
+                        {% if view.kwargs.sort == '-build_date' %}
+                            <a href="{% url "house_sort" 'build_date' %}" class="green">Date Built <i class="fa fa-caret-up"></i></a>
+                        {% else %}
+                            <a href="{% url "house_sort" '-build_date' %}" class="green">Date Built <i class="fa fa-caret-down"></i></a>
+                        {% endif %}
+                    </th>
+                    <th>Its housemates</th>
                 </tr>
-            {% endfor %}
+                </thead>
+                {% for house in object_list %}
+                    <tr>
+                        <th>{{ house.street }}</th>
+                        <th>{{ house.st_number }}</th>
+                        <th>{{ house.apartment_amount }}</th>
+                        <th>{{ house.build_date }}</th>
+                        <th><a href="{% url "house_housemates" house.id %}">Link</a></th>
+                    </tr>
+                {% endfor %}
 
-        </table>
+            </table>
         </div>
     {% else %}
         <p>There are no houses in database</p>

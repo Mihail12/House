@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap-grid.css' %}" />
     <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap-reboot.css' %}" />
     <link rel="stylesheet" type="text/css" href="{% static 'css/custom.css' %}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body class="body" style="background-color:#f6f6f6">
 	<div class="container-fluid" style="min-height:95%; ">
@@ -27,7 +28,7 @@
 		 	<div class="well bs-sidebar" id="sidebar" style="background-color:#fff">
 			  {% block sidebar %}
 			  <ul class="">
-				  <li><a href="{% url "admin:app_housemates_changelist" %}">Admin</a></li>
+				  <li><a href="{% url "admin:app_housemate_changelist" %}">Admin</a></li>
 				  <li><a href="{% url "house" %}">All Houses</a></li>
 				  <li><a href="{% url "housemates" %}">All Housemates</a></li>
 			  </ul>
